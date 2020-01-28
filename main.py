@@ -83,11 +83,11 @@ def accuracy(test_input,test_output):
 
 def logic(num):
     if (num%15==0):
-        return 'FizzBuzz'
+        return 'fizzbuzz'
     elif (num%5==0):
-        return 'Buzz'
+        return 'buzz'
     elif (num%3==0):
-        return 'Fizz'
+        return 'fizz'
     else : 
         return num
 
@@ -99,11 +99,11 @@ def logic2(filename): #uses global neural network
         temp=net(torch.tensor(x).float())
         out=(np.argmax(temp.detach().numpy(),axis=0))
         if(out==0):
-            out= 'Fizz'
+            out= 'fizz'
         elif (out==1):
-            out= 'Buzz'
+            out= 'buzz'
         elif (out==2):
-            out='FizzBuzz'
+            out='fizzbuzz'
         else :
             out= q[i]
         f.write(str(out)+'\n')
